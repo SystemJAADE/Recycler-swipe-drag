@@ -77,7 +77,7 @@ touchHelper
                 Log.d(TAG, "onDragItemListener: callback after dragging recycler view item");
             }
         })
-        .setOnSwipeItemListener(new OnSwipeListener() {
+        .setOnSwipeItemListener(new OnSwipeListener(int itemPosition) {
             @Override
             public void onSwipeItemListener() {
                 Log.d(TAG, "onSwipeItemListener: callback after swiping recycler view item");
