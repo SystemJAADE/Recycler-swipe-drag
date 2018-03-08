@@ -45,8 +45,8 @@ class RecyclerHelper<T>(var list: ArrayList<T>, var mAdapter: RecyclerView.Adapt
 
 
     override fun onSwiped(viewHolder: RecyclerView.ViewHolder?, direction: Int) {
-        onMoved(viewHolder!!.oldPosition, viewHolder.adapterPosition)
-        onSwipeListener?.onSwipeItemListener()
+        //onMoved(viewHolder!!.oldPosition, viewHolder.adapterPosition)
+        onSwipeListener?.onSwipeItemListener(viewHolder?.adapterPosition!!)
     }
 
     override fun isLongPressDragEnabled(): Boolean {
